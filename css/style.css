@@ -1,0 +1,112 @@
+bbody, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Cor de fundo opcional */
+    position: relative; /* Necessário para posicionar a marca d'água corretamente */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: url('caminho/para/sua-imagem-de-marca-dagua.png') no-repeat center center;
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o fundo */
+    opacity: 0.1; /* Ajusta a opacidade da marca d'água conforme necessário */
+    z-index: -1; /* Garante que a imagem de marca d'água fique atrás do conteúdo */
+}
+
+.container {
+    text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header .logo h1 {
+    margin: 0;
+}
+
+.logo img {
+    width: 350px;
+    margin-top: 50px;
+
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.btn {
+    background: #f04e1e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 30px;
+    line-height: 30px;
+    color: #484848;
+}
+
+.h2 {
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form button {
+    padding: 10px;
+    background: #f04e1e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
